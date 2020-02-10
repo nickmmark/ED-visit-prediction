@@ -1,5 +1,5 @@
 # ED-visit-prediction
-Using google search trends to predict emergency department (ED) visits
+Using google search trends and local weather to predict emergency department (ED) visits
 
 # Background
 
