@@ -7,7 +7,9 @@ The volume of patients who visit emergency departments is highly variable. Envir
 # Details
 
 ![temporal trend correlation](https://github.com/)
-![local hospitals autocorrelation](https://github.com/nickmmark/ED-visit-prediction/figures/specific local hospitals.png)
+
+![local hospitals autocorrelation](https://github.com/nickmmark/ED-visit-prediction/figures/specific_local_hospitals.png)
+
 ![last 30 minutes correlation](https://github.com/)
 
 
