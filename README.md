@@ -1,8 +1,8 @@
 # ED-visit-prediction
-Using google search trends and local weather to predict emergency department (ED) visits
+Using Google search trends and local weather to predict patient visits to local emergency departments 
 
 # Background
-The volume of patients who visit emergency departments is highly variable in part because numerous environmental factors (weather, local events, traffic, etc) can effect the onset of illness/injury and influence the decision to go to the ED. For this reason, Emergency Departments exhibit significant hourly, daily, and seasonal variability in the number of patients arriving. I explored how publicly available data, such as Google Searches and local weather, can be used to predict the number of patients arriving at local emergency department arrivals.
+Emergency Departments exhibit significant hourly, daily, and seasonal variability in the number of new patients arriving. The volume of patients who visit emergency departments is highly variable in part because numerous environmental factors (weather, local events, traffic, etc) can effect the onset of illness/injury and influence the decision of patients to seek care the ED.  I explored how publicly available data, such as Google Searches and local weather, can be used to predict the number of patients arriving at local emergency department arrivals.
 
 Google Trends has been used as a near realtime method of predicting interest; for example GT has been used to [predict sales of retail, automotive, and home sales](https://static.googleusercontent.com/media/www.google.com/en//googleblogs/pdfs/google_predicting_the_present.pdf)
 , to [forecast stock market changes](https://editorialexpress.com/cgi-bin/conference/download.cgi?db_name=SNDE2018&paper_id=100), to [predict changes in cryptocurrency prices](https://www.researchgate.net/publication/279917417_Bitcoin_Spread_Prediction_Using_Social_And_Web_Search_Media/figures?lo=1), to to [predict political election results](https://www.reddit.com/r/dataisbeautiful/comments/8bqgeb/google_trends_predict_15_historic_election/).
@@ -20,13 +20,12 @@ These diurnal patterns exist for all hospitals, however they are specific to the
 ![local hospitals autocorrelation](https://github.com/nickmmark/ED-visit-prediction/blob/master/figures/specific%20local%20hospitals.png)
 
 
-
 To gather the data I used two R packages:
 - [gtrendsR](https://cran.r-project.org/web/packages/gtrendsR/gtrendsR.pdf) which is a "pseudo-APi" that pulls google trends data as specified. Note that there are limitations imposed on this (max of 4000 searches per day, so creative solutions (using a VPN) can be helpful to build a large historical dataset for model training.
 - [rwunderground](https://cran.r-project.org/web/packages/rwunderground/index.html) which uses the Weather Underground API to pull historical or current weather data. There are free API keys available, however I recommend a paid subscription.
 
 To pull the Google Trends data for a particular hospital you can use the following code:
-```
+```R
 # load library
 library(gtrendsR)
 
@@ -56,13 +55,13 @@ This API can provide data at different levels of granularity, depending on the t
 
 Using the above code, with a simple `for` loop to automate different searches and string the results together, I pulled an hourly dataset covering a month. By aligning the GT searches and the *NEXT* hour's ED arrivals we can build a database and perform some basic analysis. It is straightforward to do this R:
 
-```
+```R
 library(Hmisc)
 rcorr(GTandArrivals, type="pearson")
 ```
 
 You can graph the results as a [correlogram](https://en.wikipedia.org/wiki/Correlogram) using 
-```
+```R
 library(corrgram)
 corrgram(GTandArrivals, order=TRUE, lower.panel=panel.shade,
   upper.panel=panel.pie, text.panel=panel.txt,
