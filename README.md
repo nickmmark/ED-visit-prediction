@@ -4,6 +4,9 @@ Using google search trends and local weather to predict emergency department (ED
 # Background
 The volume of patients who visit emergency departments is highly variable. Environmental factors (weather, local events, traffic, etc) can influence the decision to go to the ED. Google search is often used to identify the closest EDs as part of the planning process. Using APIs for weather and Google Trends I demonstrate that environmental factors and Google Search trends can be used to predict visits to local emergency departments.
 
+![pattern of ED visits and Google searches](https://github.com/nickmmark/ED-visit-prediction/blob/master/figures/ED%20load%20and%20GT%20correlation.png)
+
+
 # Details
 
 ![temporal trend correlation](https://github.com/)
