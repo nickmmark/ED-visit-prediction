@@ -69,16 +69,17 @@ corrgram(GTandArrivals, order=TRUE, lower.panel=panel.shade,
   main="Last hour Google Searches and ED arrivals")
 ```
 
-I made a slightly nicer looking figure using [GraphPad Prism](https://www.graphpad.com/scientific-software/prism/):
-
-Even as a single variable, Google Searches for the name of a specific hospital predicts the number of arrivals in the next hour.
+I made a slightly nicer looking figure using [GraphPad Prism](https://www.graphpad.com/scientific-software/prism/). As you can see below, even as a single variable, Google Searches for the name of a specific hospital predicts the number of arrivals there in the next hour. 
 ![searches in the last 30 minutes predict the arrivals in the next 30 minutes](https://github.com/nickmmark/ED-visit-prediction/blob/master/figures/GT%20ED%20arrivals%20prelim%20exporation.jpg)
 
 
 
 # Version/To-do
+- In the future I would love to combine this with the work I did with the [Seattle Fire realtime 911 API](https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj) and [geospatial exporation of out of hospital cardiac arrest](https://github.com/nickmmark/mapping-seattle-911).
+- Demonstrate how to build more sophisticated models that use time, weather, and GT searches to predict the next hours ED volume
 
 
 # References
+
 - [Health-Related Google Searches Doubled in the Week Before Patients’ Emergency Department Visits](https://www.pennmedicine.org/news/news-releases/2019/february/health-related-google-searches-doubled-in-the-week-before-patients-emergency-department-visits)
 - 
