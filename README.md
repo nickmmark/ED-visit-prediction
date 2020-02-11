@@ -2,7 +2,9 @@
 Using Google search trends and local weather to predict patient visits to local emergency departments 
 
 # Background
-Emergency Departments exhibit significant hourly, daily, and seasonal variability in the number of new patients arriving. The volume of patients who visit emergency departments is highly variable in part because numerous environmental factors (weather, local events, traffic, etc) can effect the onset of illness/injury and influence the decision of patients to seek care the ED.  I explored how publicly available data, such as Google Searches and local weather, can be used to predict the number of patients arriving at local emergency department arrivals.
+Emergency Departments exhibit significant hourly, daily, and seasonal variability in the number of new patients arriving. The volume of patients who visit emergency departments is highly variable in part because numerous environmental factors (weather, local events, traffic, etc) can effect the onset of illness/injury and influence the decision of patients to seek care the ED. Being able to accurately predict patient arrivals at emergency departments is useful because it can be used to optimize staffing and resource availability to minimize patient waiting times and maintain optimal staffing ratios.
+
+I explored how publicly available data, such as Google Searches and local weather, can be used to predict the number of patients arriving at local emergency department arrivals.
 
 Google Trends has been used as a near realtime method of predicting interest; for example GT has been used to [predict sales of retail, automotive, and home sales](https://static.googleusercontent.com/media/www.google.com/en//googleblogs/pdfs/google_predicting_the_present.pdf)
 , to [forecast stock market changes](https://editorialexpress.com/cgi-bin/conference/download.cgi?db_name=SNDE2018&paper_id=100), to [predict changes in cryptocurrency prices](https://www.researchgate.net/publication/279917417_Bitcoin_Spread_Prediction_Using_Social_And_Web_Search_Media/figures?lo=1), to to [predict political election results](https://www.reddit.com/r/dataisbeautiful/comments/8bqgeb/google_trends_predict_15_historic_election/).
@@ -10,7 +12,7 @@ Google Trends has been used as a near realtime method of predicting interest; fo
 In the medical arena, [Google Trends was used for many years to estimate influenza activity in more than 25 countries, potentially predicting the onset of outbreaks by up to 10 days](https://en.wikipedia.org/wiki/Google_Flu_Trends). 
 
 
-# Details
+# Google Trends predicts ED arrivals
 First I compared the pattern of searches for "hospital" and the pattern of ED arrivals in a publically available database. (MIMIC III is a good place to start for those interested in doing this work themeselves; for those interested in requesting access see [here](https://mimic.physionet.org/gettingstarted/access/)). I observed that the same diurnal pattern in ED visits was also noted in GT searches:
 
 ![pattern of ED visits and Google searches](https://github.com/nickmmark/ED-visit-prediction/blob/master/figures/ED%20load%20and%20GT%20correlation.png)
@@ -70,7 +72,7 @@ corrgram(GTandArrivals, order=TRUE, lower.panel=panel.shade,
 
 I made a slightly nicer looking figure using [GraphPad Prism](https://www.graphpad.com/scientific-software/prism/). As you can see below, even as a single variable, Google Searches for the name of a specific hospital predicts the number of arrivals there in the next hour. 
 ![searches in the last 30 minutes predict the arrivals in the next 30 minutes](https://github.com/nickmmark/ED-visit-prediction/blob/master/figures/GT%20ED%20arrivals%20prelim%20exporation.jpg)
-
+If we use the (admittedly arbitrary) number of searches >= 35/hr as cutoff it does a reasonable job of predicting high or low volume over the next hour. It is important to recognize that a lot of this is just due to similar diurnal patterns in both GT searches and ED arrivals, but imagine how this data point could be *combined* with other temporal and environment features to build an even better predictive model.
 
 
 # Version/To-do
