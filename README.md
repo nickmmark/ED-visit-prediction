@@ -74,13 +74,15 @@ I made a slightly nicer looking figure using [GraphPad Prism](https://www.graphp
 ![searches in the last 30 minutes predict the arrivals in the next 30 minutes](https://github.com/nickmmark/ED-visit-prediction/blob/master/figures/GT%20ED%20arrivals%20prelim%20exporation.jpg)
 If we use the (admittedly arbitrary) number of searches >= 35/hr as cutoff it does a reasonable job of predicting high or low volume over the next hour. It is important to recognize that a lot of this is just due to similar diurnal patterns in both GT searches and ED arrivals, but imagine how this data point could be *combined* with other temporal and environment features to build an even better predictive model.
 
+# Local weather predicts ED arrivals
+
 
 # Version/To-do
-- In the future I would love to combine this with the work I did with the [Seattle Fire realtime 911 API](https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj) and [geospatial exporation of out of hospital cardiac arrest](https://github.com/nickmmark/mapping-seattle-911).
+- explore other publically available API data: *traffic*, *social media posts* (such as with the '''Rtweet''' twitter API), etc
 - Demonstrate how to build more sophisticated models that use time, weather, and GT searches to predict the next hours ED volume
-
+- In the future I would love to combine this with the work I did with the [Seattle Fire realtime 911 API](https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj) and [geospatial exporation of out of hospital cardiac arrest](https://github.com/nickmmark/mapping-seattle-911).
 
 # References
-
+- [Google Trends](https://static.googleusercontent.com/media/www.google.com/en//googleblogs/pdfs/google_predicting_the_present.pdf)
 - [Health-Related Google Searches Doubled in the Week Before Patients’ Emergency Department Visits](https://www.pennmedicine.org/news/news-releases/2019/february/health-related-google-searches-doubled-in-the-week-before-patients-emergency-department-visits)
 - 
