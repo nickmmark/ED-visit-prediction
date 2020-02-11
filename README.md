@@ -54,19 +54,20 @@ write.csv(google.trends, file = "MyData.csv")
 This API can provide data at different levels of granularity, depending on the time scale. For predicting ED arrivals in the next hour we need to pick an appropriate time scale. For example we could choose between these time scales:
 ![search for 'emergency room' at different time scales](https://github.com/nickmmark/ED-visit-prediction/blob/master/figures/GT%20at%20different%20time%20scales.png)
 
-Using the above code, with a simple '''for''' loop to automate different searches and string the results together, I pulled an hourly dataset covering a month. By aligning the GT searches and the *NEXT* hour's ED arrivals we can build a database and perform some basic analysis. It is straightforward to do this R:
-'''
+Using the above code, with a simple `for` loop to automate different searches and string the results together, I pulled an hourly dataset covering a month. By aligning the GT searches and the *NEXT* hour's ED arrivals we can build a database and perform some basic analysis. It is straightforward to do this R:
+
+```
 library(Hmisc)
 rcorr(GTandArrivals, type="pearson")
-'''
+```
 
 You can graph the results as a [correlogram](https://en.wikipedia.org/wiki/Correlogram) using 
-'''
+```
 library(corrgram)
 corrgram(GTandArrivals, order=TRUE, lower.panel=panel.shade,
   upper.panel=panel.pie, text.panel=panel.txt,
   main="Last hour Google Searches and ED arrivals")
- '''
+```
 
 I made a slightly nicer looking figure using [GraphPad Prism](https://www.graphpad.com/scientific-software/prism/):
 
