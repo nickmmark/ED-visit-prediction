@@ -85,4 +85,6 @@ If we use the (admittedly arbitrary) number of searches >= 35/hr as cutoff it do
 # References
 - [Google Trends](https://static.googleusercontent.com/media/www.google.com/en//googleblogs/pdfs/google_predicting_the_present.pdf)
 - [Health-Related Google Searches Doubled in the Week Before Patients’ Emergency Department Visits](https://www.pennmedicine.org/news/news-releases/2019/february/health-related-google-searches-doubled-in-the-week-before-patients-emergency-department-visits)
-- 
+- Preis et al, [Quantifying Trading Behavior in Financial Markets Using Google Trends](https://www.nature.com/articles/srep01684?__hstc=113740504.2a1e835c34ab7bf88e972fdd7a7debc8.1424476800061.1424476800062.1424476800063.1&__hssc=113740504.1.1424476800064&__hsfp=3972014050), Scientific Reports 2013
+- Carniero et al, [Google Trends: A Web-Based Tool for Real-Time Surveillance of Disease Outbreaks](https://academic.oup.com/cid/article/49/10/1557/298019), Clinical Infectious Disease 2009
+- Casey et al, [Predicting Patients at Risk for Leaving without Being Seen in the Emergency Department using Machine Learning](https://www.annemergmed.com/article/S0196-0644(18)30753-4/fulltext), Annals of Emergency Medicine 2018
