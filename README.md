@@ -78,9 +78,9 @@ If we use the (admittedly arbitrary) number of searches >= 35/hr as cutoff it do
 
 
 # Version/To-do
-- explore other publically available API data: *traffic*, *social media posts* (such as with the '''Rtweet''' twitter API), etc
-- Demonstrate how to build more sophisticated models that use time, weather, and GT searches to predict the next hours ED volume
-- In the future I would love to combine this with the work I did with the [Seattle Fire realtime 911 API](https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj) and [geospatial exporation of out of hospital cardiac arrest](https://github.com/nickmmark/mapping-seattle-911).
+[] explore other publically available API data: *traffic*, *social media posts* (such as with the '''Rtweet''' twitter API), etc
+[] Demonstrate how to build more sophisticated models that use time, weather, and GT searches to predict the next hours ED volume
+[] In the future I would love to combine this with the work I did with the [Seattle Fire realtime 911 API](https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj) and [geospatial exporation of out of hospital cardiac arrest](https://github.com/nickmmark/mapping-seattle-911).
 
 # References
 - [Google Trends](https://static.googleusercontent.com/media/www.google.com/en//googleblogs/pdfs/google_predicting_the_present.pdf)
