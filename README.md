@@ -78,7 +78,7 @@ If we use the (admittedly arbitrary) number of searches >= 35/hr as cutoff it do
 
 
 # Version/To-do
-[] explore other publically available API data: *traffic*, *social media posts* (such as with the '''Rtweet''' twitter API), etc
+[] explore other publically available API data: *traffic*, *social media posts* (such as with the ```Rtweet``` twitter API), etc
 
 [] Demonstrate how to build more sophisticated models that use time, weather, and GT searches to predict the next hours ED volume
 
