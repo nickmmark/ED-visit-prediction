@@ -76,6 +76,9 @@ I made a slightly nicer looking figure using [GraphPad Prism](https://www.graphp
 If we use the (admittedly arbitrary) number of searches >= 35/hr as cutoff it does a reasonable job of predicting high or low volume over the next hour. It is important to recognize that a lot of this is just due to similar diurnal patterns in both GT searches and ED arrivals, but imagine how this data point could be *combined* with other temporal and environment features to build an even better predictive model.
 
 # Local weather predicts ED arrivals
+Anyone who's every worked in an ED knows that extreme weather (blizzard, torrential rain, etc) often "keeps people home."
+I posited that incorporating real-time weather information can help predict ED arrivals for the immediate future.
+
 
 # Parsing 911 dispatched to predict ED arrivals
 Another data signature that may preceed an ED visit is a call to 911 and the dispatch on an ambulance.
