@@ -1,5 +1,6 @@
 # ED-visit-prediction
 Using Google search trends and local weather to predict patient visits to local emergency departments 
+I conceived of this shortly after my toddler accidentally gave me a corneal abrasion; one of the first things I did was google my local ED for driving directions. This led me to wonder, how many ED walk ins are preceeded by people doing the same? Can the volume of searches for ED's be used to predict visits in the near term?
 
 # Background
 Emergency Departments exhibit significant hourly, daily, and seasonal variability in the number of new patients arriving. The volume of patients who visit emergency departments is highly variable in part because numerous environmental factors (weather, local events, traffic, etc) can effect the onset of illness/injury and influence the decision of patients to seek care the ED. Being able to accurately predict patient arrivals at emergency departments is useful because it can be used to optimize staffing and resource availability to minimize patient waiting times and maintain optimal staffing ratios.
@@ -76,6 +77,12 @@ If we use the (admittedly arbitrary) number of searches >= 35/hr as cutoff it do
 
 # Local weather predicts ED arrivals
 
+# Parsing 911 dispatched to predict ED arrivals
+Another data signature that may preceed an ED visit is a call to 911 and the dispatch on an ambulance.
+When I worked in the Harborview ED as IM Resident, I would always keep the Seattle Fire Realtime 911 dispatch window open for situational awareness about EMS activity. This was a great way to know (before the radio call) about serious medical emergencies like cardiac arrest, overdoses, difficulty breathing, etc.
+* Caveat: Most cities don't provide EMS dispatch in real-time like Seattle.
+
+My Hypothesis is that by combining Google searches (for lower acuity emergencies) and 911 dispatches (for higher acuity) we can build a more robust ED arrivals prediction.
 
 # Version/To-do
 [] explore other publically available API data: *traffic*, *social media posts* (such as with the ```Rtweet``` twitter API), etc
